@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="main.css">
+
+	<title>MashupAPIhomework</title>
+
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+	<script src="sketch.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script>
+	url = "https://api.nytimes.com/svc/mostpopular/v2/mostviewed/Arts/7.json";
+	url += '?' + $.param({
+	  'api-key': "API: 076dc229f12f41ce90984b47c56a5b87"
+	});
+	$.ajax({
+	  url: url,
+	  method: 'GET',
+	}).done(function(result) {
+	  console.log(result);
+	}).fail(function(err) {
+	  throw err;
+	});
+
+	</script>
+
+</head>
+
+<body>
+
+	<h1 style=" text-align: center "> NEW YORK TIMES API TEST</h1>
+
+
+   <div class="imagewrapper">
+		<div class = "imagebox">
+ 		  <img src= "https://elrincondelgeek.files.wordpress.com/2011/04/google-chrome-logo-400x400.jpg"
+			alt = "google">
+				<div class ="textbox">
+					<p> This is text to image1</p>
+				</div>
+		</div>
+		<div class = "imagebox">
+		<img src= "https://elrincondelgeek.files.wordpress.com/2011/04/google-chrome-logo-400x400.jpg"
+			alt = "google">
+			<div class ="textbox">
+				<p> This is text to image2</p>
+			</div>
+		</div>
+		<div class = "imagebox">
+			<img src= "https://elrincondelgeek.files.wordpress.com/2011/04/google-chrome-logo-400x400.jpg"
+			alt = "google">
+			<div class ="textbox">
+				<p> This is text to image3</p>
+			</div>
+		</div>
+	 <div class = "imagebox">
+		 <img src= "https://elrincondelgeek.files.wordpress.com/2011/04/google-chrome-logo-400x400.jpg"
+		 alt = "google">
+			 <div class ="textbox">
+				 <p> This is text to image4</p>
+			 </div>
+	 </div>
+	 <div class = "imagebox">
+	 <img src= "https://elrincondelgeek.files.wordpress.com/2011/04/google-chrome-logo-400x400.jpg"
+		 alt = "google">
+		 <div class ="textbox">
+			 <p> This is text to image5</p>
+		 </div>
+	 </div>
+	 <div class = "imagebox">
+		 <img src= "https://elrincondelgeek.files.wordpress.com/2011/04/google-chrome-logo-400x400.jpg"
+		 alt = "google">
+		 <div class ="textbox">
+			 <p> This is text to image6</p>
+		 </div>
+	 </div>
+ </div>
+
+
+</body>
+</html>
